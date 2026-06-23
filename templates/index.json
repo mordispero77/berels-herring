@@ -15,16 +15,16 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Browse our latest products",
+            "heading": "Cured the Right Way. Since Forever.",
             "heading_size": "h0"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
+            "button_label_1": "Get Curing",
             "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
+            "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -48,10 +48,33 @@
         "show_text_below": false
       }
     },
+    "social_proof_band": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Trusted by 2,000+ families every Shabbat.",
+            "heading_size": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "heading"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
+        "title": "The Lineup",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
@@ -69,16 +92,109 @@
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
+        "show_rating": true,
+        "quick_add": "standard",
         "columns_mobile": "2",
         "padding_top": 44,
         "padding_bottom": 36
+      }
+    },
+    "story_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div style=\"display:flex;flex-wrap:wrap;margin:0 -16px;\"><div style=\"flex:1;min-width:300px;min-height:420px;overflow:hidden;margin:0;\"><img src=\"{{ 'catering-platter.jpeg' | asset_url }}\" alt=\"Berel's products\" style=\"width:100%;height:100%;min-height:420px;object-fit:cover;display:block;\"></div><div style=\"flex:1;min-width:300px;background:#0A2A6E;color:#FFFFFF;display:flex;flex-direction:column;justify-content:center;padding:56px 48px;\"><p style=\"color:#29B8E8;font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 14px;\">Our Story</p><h2 style=\"font-size:2rem;font-weight:700;line-height:1.2;margin:0 0 18px;color:#FFFFFF;\">We take the fish seriously.<br>Ourselves? Less so.</h2><p style=\"font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.8);margin:0 0 32px;\">Berel's Herring Co. has been curing the good stuff for Shabbat tables across Israel. Bold flavors, no shortcuts, and always ready when Friday rolls around.</p><a href=\"/pages/about\" style=\"display:inline-block;background:#F5921E;color:#FFFFFF;padding:14px 28px;border-radius:40px;font-weight:700;font-size:0.9375rem;text-decoration:none;width:fit-content;\">Our Story</a></div></div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "benefits_strip": {
+      "type": "multicolumn",
+      "blocks": {
+        "col_1": {
+          "type": "column",
+          "settings": {
+            "title": "Cured Fresh Weekly",
+            "text": "<p>Every batch is made to order. No sitting on a shelf for months — this is the real thing.</p>"
+          }
+        },
+        "col_2": {
+          "type": "column",
+          "settings": {
+            "title": "Shabbat-Ready in Minutes",
+            "text": "<p>Order by Thursday, ready for your table Friday. We make the easy part even easier.</p>"
+          }
+        },
+        "col_3": {
+          "type": "column",
+          "settings": {
+            "title": "Made to Share",
+            "text": "<p>From family Shabbat to a 200-person simcha — we scale. Custom platters, custom quantities.</p>"
+          }
+        }
+      },
+      "block_order": ["col_1", "col_2", "col_3"],
+      "settings": {
+        "title": "Why Berel's",
+        "heading_size": "h2",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "color_scheme": "scheme-5",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "catering_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div style=\"display:flex;flex-wrap:wrap;\"><div style=\"flex:1;min-width:300px;display:flex;flex-direction:column;justify-content:center;padding:56px 48px;background:#0A2A6E;color:#FFFFFF;\"><p style=\"color:#29B8E8;font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 14px;\">Catering & Events</p><h2 style=\"font-size:2rem;font-weight:700;line-height:1.2;margin:0 0 18px;color:#FFFFFF;\">Bringing the herring<br>to the party — literally.</h2><p style=\"font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.8);margin:0 0 32px;\">Custom platters for simchas, Shabbat gatherings, and corporate events. We handle the fish; you handle the guest list.</p><a href=\"https://wa.me/972000000000\" style=\"display:inline-block;background:#F5921E;color:#FFFFFF;padding:14px 28px;border-radius:40px;font-weight:700;font-size:0.9375rem;text-decoration:none;width:fit-content;\">Plan Your Event</a></div><div style=\"flex:1;min-width:300px;min-height:420px;overflow:hidden;\"><img src=\"{{ 'hero-platter.jpeg' | asset_url }}\" alt=\"Catering platter\" style=\"width:100%;height:100%;min-height:420px;object-fit:cover;display:block;\"></div></div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "newsletter_section": {
+      "type": "newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get the Shabbat Heads-Up"
+          }
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>We'll remind you when to order. Nothing else.</p>"
+          }
+        },
+        "email_form": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": ["heading", "paragraph", "email_form"],
+      "settings": {
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
     "image_banner",
-    "featured_collection"
+    "social_proof_band",
+    "featured_collection",
+    "story_section",
+    "benefits_strip",
+    "catering_section",
+    "newsletter_section"
   ]
 }

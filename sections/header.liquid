@@ -172,7 +172,9 @@
             }}
           </div>
         {%- else -%}
-          <span class="h2">{{ shop.name }}</span>
+          <div class="header__heading-logo-wrapper">
+            <img src="{{ 'berels-logo.jpeg' | asset_url }}" alt="{{ shop.name }}" class="header__heading-logo motion-reduce" width="180" height="60" loading="eager" style="height:48px;width:auto;object-fit:contain;">
+          </div>
         {%- endif -%}
       </a>
       {%- if request.page_type == 'index' -%}
@@ -215,7 +217,9 @@
             }}
           </div>
         {%- else -%}
-          <span class="h2">{{ shop.name }}</span>
+          <div class="header__heading-logo-wrapper">
+            <img src="{{ 'berels-logo.jpeg' | asset_url }}" alt="{{ shop.name }}" class="header__heading-logo motion-reduce" width="180" height="60" loading="eager" style="height:48px;width:auto;object-fit:contain;">
+          </div>
         {%- endif -%}
       </a>
       {%- if request.page_type == 'index' -%}

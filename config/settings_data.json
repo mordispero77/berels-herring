@@ -18,7 +18,7 @@
             "background": "#FFFFFF",
             "background_gradient": "",
             "text": "#0A2A6E",
-            "button": "#29B8E8",
+            "button": "#F5921E",
             "button_label": "#FFFFFF",
             "secondary_button_label": "#29B8E8",
             "shadow": "#0A2A6E"
@@ -29,7 +29,7 @@
             "background": "#E8F7FD",
             "background_gradient": "",
             "text": "#0A2A6E",
-            "button": "#1A4FC8",
+            "button": "#F5921E",
             "button_label": "#FFFFFF",
             "secondary_button_label": "#1A4FC8",
             "shadow": "#0A2A6E"
@@ -180,7 +180,7 @@
       "predictive_search_show_vendor": false,
       "predictive_search_show_price": false,
       "currency_code_enabled": true,
-      "cart_type": "notification",
+      "cart_type": "drawer",
       "show_vendor": false,
       "show_cart_note": false,
       "cart_drawer_collection": "",

@@ -1,1 +1,0 @@
-/Users/mordispero/Desktop/berels herring v1/AGENTS.md

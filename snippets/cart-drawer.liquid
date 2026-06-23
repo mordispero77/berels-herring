@@ -74,6 +74,27 @@
           </span>
         </button>
       </div>
+
+      {%- assign free_delivery_threshold = 15000 -%}
+      {%- assign cart_total = cart.total_price -%}
+      {%- if cart != empty -%}
+        {%- if cart_total >= free_delivery_threshold -%}
+          <div style="background:#0A2A6E;color:#FFFFFF;text-align:center;padding:10px 16px;font-size:0.8125rem;font-weight:600;">
+            You qualify for free delivery!
+          </div>
+        {%- else -%}
+          {%- assign remaining = free_delivery_threshold | minus: cart_total -%}
+          {%- assign progress_pct = cart_total | times: 100 | divided_by: free_delivery_threshold -%}
+          <div style="padding:12px 16px;background:#E8F7FD;">
+            <p style="font-size:0.8125rem;color:#0A2A6E;margin:0 0 6px;text-align:center;">
+              Add <strong>{{ remaining | money }}</strong> more for free delivery
+            </p>
+            <div style="background:#FFFFFF;border-radius:40px;height:6px;overflow:hidden;">
+              <div style="background:#29B8E8;width:{{ progress_pct }}%;height:100%;border-radius:40px;"></div>
+            </div>
+          </div>
+        {%- endif -%}
+      {%- endif -%}
       <cart-drawer-items
         view-event-payload="{{ cart | standard_event_data: 'view', context: 'dialog' | escape }}"
         view-event-trigger="manual"
@@ -487,6 +508,16 @@
           <div id="CartDrawer-CartErrors" role="alert"></div>
         </form>
       </cart-drawer-items>
+      {%- if cart != empty -%}
+        <div style="padding:16px;border-top:1px solid rgba(10,42,110,0.1);">
+          <p style="font-size:0.75rem;font-weight:600;color:#0A2A6E;text-transform:uppercase;letter-spacing:0.08em;margin:0 0 10px;">Customers Also Add</p>
+          <a href="/collections/all" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#0A2A6E;">
+            <span style="flex:1;font-size:0.875rem;">Browse more varieties</span>
+            <span style="font-size:0.875rem;color:#F5921E;font-weight:600;">+ Add &rarr;</span>
+          </a>
+        </div>
+      {%- endif -%}
+
       <div class="drawer__footer">
         {%- if settings.show_cart_note -%}
           <details id="Details-CartDrawer">

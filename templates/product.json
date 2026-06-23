@@ -23,9 +23,21 @@
           "type": "title",
           "settings": {}
         },
+        "rating": {
+          "type": "rating",
+          "settings": {}
+        },
         "price": {
           "type": "price",
           "settings": {}
+        },
+        "inventory": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 5,
+            "show_inventory_quantity": true
+          }
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -42,7 +54,19 @@
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
+            "show_gift_card_recipient": false
+          }
+        },
+        "social_proof": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<p style=\"color:#29B8E8;font-weight:600;font-size:0.8125rem;margin:8px 0 0;\">Ordered by 2,000+ families this month</p>"
+          }
+        },
+        "delivery_estimate": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<p style=\"color:#0A2A6E;font-size:0.8125rem;margin:6px 0 0;\">Order today — arrives by Shabbat</p>"
           }
         },
         "description": {
@@ -59,10 +83,14 @@
       "block_order": [
         "vendor",
         "title",
+        "rating",
         "price",
+        "inventory",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "social_proof",
+        "delivery_estimate",
         "description",
         "share"
       ],
@@ -92,7 +120,7 @@
     "related-products": {
       "type": "related-products",
       "settings": {
-        "heading": "You may also like",
+        "heading": "Customers Also Add",
         "heading_size": "h2",
         "products_to_show": 4,
         "columns_desktop": 4,
@@ -102,7 +130,7 @@
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
-        "show_rating": false,
+        "show_rating": true,
         "padding_top": 36,
         "padding_bottom": 28
       }
